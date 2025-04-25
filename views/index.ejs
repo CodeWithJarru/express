@@ -1,0 +1,29 @@
+<%- include('./partials/header') %>
+
+  <div class="container mt-5">
+    <h1>Welcome to CodersBlog</h1>
+    <p>Explore the latest posts from our talented authors. Stay updated with fresh content and insights!</p>
+    <div class="blog-posts-wrapper">
+      <div class="row d-flex flex-wrap" style="gap: 10px;justify-content: center;">
+        <% posts.slice(0, 4).forEach(post => { %>
+          <div class="col-4" style="width: 38%;">
+            <div class="card" style="height: 250px; display: flex; flex-direction: column; justify-content: space-between;">
+              <div class="card-header">
+          <h4><%= post.title %></h4>
+              </div>
+              <div class="card-body">
+          <p class="card-text">
+            <%= post.content %><br>
+            <%= post.author %>
+          </p>
+          <a href="blog/<%= post.slug %>" class="btn btn-primary">View Post</a>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <%- include('partials/footer') %>
