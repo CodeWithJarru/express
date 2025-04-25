@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const posts = require("./data/blogs.js"); // Import the blog posts data
-const PORT = process.env.PORT || 3000;
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views")); // Correct path for views
 
@@ -33,6 +33,7 @@ app.get("/blog/:slug", (req, res) => {
 
 
 // Start the server
-app.listen(3000, () => {
-  console.log("Server running at http://localhost:3000");
+const port = process.env.PORT || 3000;  // Use dynamic port for Railway
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
