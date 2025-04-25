@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const posts = require("./data/blogs.js"); // Import the blog posts data
-
+const PORT = process.env.PORT || 3000;
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views")); // Correct path for views
 
