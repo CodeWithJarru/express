@@ -1,12 +1,12 @@
 <%- include('./partials/header') %>
   <div class="container mt-5">
-    <div class="card">
+    <div class="post">
       <div class="card-header">
-        <h4><%= post.title %></h4>
+        <h4 class="title"><%= post.title %></h4>
       </div>
       <div class="card-body">
-        <p class="card-text"><%= post.content %></p>
-        <p class="card-text"><%= post.author %></p>
+        <p class="card-text"><%- post.content %></p>
+        <p class="card-text">By <%= post.author %></p>
       </div>
     </div>
   </div>

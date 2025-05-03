@@ -1,29 +1,53 @@
 <%- include('./partials/header') %>
+<div class="hero">
+  <div class="" style="width: 20%;">
 
-  <div class="container mt-5">
-    <h1>Welcome to CodersBlog</h1>
-    <p>Explore the latest posts from our talented authors. Stay updated with fresh content and insights!</p>
-    <div class="blog-posts-wrapper">
-      <div class="row d-flex flex-wrap" style="gap: 10px;justify-content: center;">
-        <% posts.slice(0, 4).forEach(post => { %>
-          <div class="col-4" style="width: 38%;">
-            <div class="card" style="height: 250px; display: flex; flex-direction: column; justify-content: space-between;">
-              <div class="card-header">
-          <h4><%= post.title %></h4>
-              </div>
-              <div class="card-body">
-          <p class="card-text">
-            <%= post.content %><br>
-            <%= post.author %>
-          </p>
-          <a href="blog/<%= post.slug %>" class="btn btn-primary">View Post</a>
-              </div>
-            </div>
-          </div>
-        <% }) %>
+    <img src="/svg.svg" alt="" class="hero-svg">
+    <img src="/svg.svg" alt="" class="hero-svg">
+  </div>
+  <div style="width: 80%;">
+
+    <h1>Welcome to Our Blog</h1>
+    <p>Explore a variety of topics, insights, and stories shared by our community. Dive into the latest trends, tips, and discussions that matter to you.</p>
+    <a href="/posts" class="read-more">Read More</a>
+  </div>
+  <div class="" style="width: 20%;">
+
+    <img src="/svg.svg" alt="" class="hero-svg">
+    <img src="/svg.svg" alt="" class="hero-svg">
+  </div>
+</div>
+
+
+<div class="about">
+  <div style="width: 50%;">
+
+    <h1>About</h1>
+    <p>Learn more about who we are and what we do. Our team is passionate about delivering exceptional value and creating meaningful connections with our audience.</p>
+    <p>We are a dedicated team committed to providing the best services to our customers. Our mission is to deliver high-quality solutions that meet your needs and exceed your expectations. With years of experience in the industry, we pride ourselves on our professionalism, innovation, and customer satisfaction. Thank you for choosing us, and we look forward to serving you!</p>
+  </div>
+  <div style="width: 30%;">
+    <img src="/dev.jpg" alt="" width="300px">
+  </div>
+  </div>
+<div class="blog-container">
+  <% posts.slice(0, 4).forEach((post, index) => { %>
+    <section class="blog-slide <%= index === 0 ? 'active' : '' %>">
+      <div class="blog-card">
+        <h2 class="blog-title"><%= post.title.substring(0, 15) %>...</h2>
+        <!-- <p class="blog-content"><%= post.content %></p> -->
+        <p class="blog-content-short"><%- post.content.substring(0, 30) %>...</p>
+        <p class="blog-author">By <%= post.author %></p>
+        <a href="blog/<%= post.slug %>" class="read-more">View Post</a>
       </div>
-    </div>
+    </section>
+    <% }) %>
   </div>
-  </div>
+  <center>
 
+    <div>
+      <a href="/posts" class="read-more">View All Posts</a>
+    </div>
+  </center>
+  
   <%- include('partials/footer') %>

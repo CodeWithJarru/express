@@ -1,5 +1,44 @@
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  <!-- <script> -->
+<!-- document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".blog-slide");
+  let current = 0;
+
+  const showSection = (index) => {
+    sections.forEach((section, i) => {
+      section.classList.remove("active");
+      if (i === index) {
+        section.classList.add("active");
+      }
+    });
+  };
+
+  // Prevent fast scroll
+  let isScrolling = false;
+
+  window.addEventListener("wheel", (e) => {
+    if (isScrolling) return;
+
+    isScrolling = true;
+
+    if (e.deltaY > 0 && current < sections.length - 1) {
+      current++;
+    } else if (e.deltaY < 0 && current > 0) {
+      current--;
+    }
+
+    showSection(current);
+
+    // Debounce scroll
+    setTimeout(() => {
+      isScrolling = false;
+    }, 800);
+  });
+}); -->
+<br>
+<footer>&copy;2025 CodersBlog</footer>
+
+    <!-- </script> -->
+    </body>
 
 </html>

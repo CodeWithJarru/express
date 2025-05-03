@@ -31,6 +31,9 @@ app.get("/blog/:slug", (req, res) => {
   }
 });
 
+app.get("/posts", (req, res) => {
+  res.render("posts", { posts }); // Render blogs.ejs with the list of posts
+});
 
 // Start the server
 const port = process.env.PORT || 3000;  // Use dynamic port for Railway

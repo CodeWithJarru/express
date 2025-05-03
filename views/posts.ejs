@@ -1,0 +1,18 @@
+<%- include('./partials/header') %>
+
+<div class="blog-container">
+  <% posts.forEach((post, index) => { %>
+    <section class="blog-slide <%= index === 0 ? 'active' : '' %>">
+      <div class="blog-card">
+        <h2 class="blog-title"><%= post.title.substring(0, 15) %>...</h2>
+        <!-- <p class="blog-content"><%= post.content %></p> -->
+        <p class="blog-content-short"><%- post.content.substring(0, 30) %>...</p>
+        <p class="blog-author">By <%= post.author %></p>
+        <a href="blog/<%= post.slug %>" class="read-more">View Post</a>
+      </div>
+    </section>
+  <% }) %>
+</div>
+
+<%- include('partials/footer') %>
+<script src="/scroll.js"></script>
