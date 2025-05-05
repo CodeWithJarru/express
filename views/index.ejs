@@ -24,7 +24,7 @@
 
     <h1>About</h1>
     <p>Learn more about who we are and what we do. Our team is passionate about delivering exceptional value and creating meaningful connections with our audience.</p>
-    <p>We are a dedicated team committed to providing the best services to our customers. Our mission is to deliver high-quality solutions that meet your needs and exceed your expectations. With years of experience in the industry, we pride ourselves on our professionalism, innovation, and customer satisfaction. Thank you for choosing us, and we look forward to serving you!</p>
+    <p>We are a dedicated team c ommitted to providing the best services to our customers. Our mission is to deliver high-quality solutions that meet your needs and exceed your expectations. With years of experience in the industry, we pride ourselves on our professionalism, innovation, and customer satisfaction. Thank you for choosing us, and we look forward to serving you!</p>
   </div>
   <div style="width: 30%;">
     <img src="/dev.jpg" alt="" width="300px">
@@ -34,11 +34,16 @@
   <% posts.slice(0, 4).forEach((post, index) => { %>
     <section class="blog-slide <%= index === 0 ? 'active' : '' %>">
       <div class="blog-card">
-        <h2 class="blog-title"><%= post.title.substring(0, 15) %>...</h2>
-        <!-- <p class="blog-content"><%= post.content %></p> -->
-        <p class="blog-content-short"><%- post.content.substring(0, 30) %>...</p>
-        <p class="blog-author">By <%= post.author %></p>
-        <a href="blog/<%= post.slug %>" class="read-more">View Post</a>
+        <img src="/<%- post.thumbnail %>" alt="" class="thumbnail">
+        <div class="card-body">
+
+          <h2 class="blog-title"><%= post.title.substring(0, 15) %>...</h2>
+          <!-- <p class="blog-content"><%= post.content %></p> -->
+          <p class="blog-content-short"><%- post.content.substring(0, 30) %>...</p>
+          <p class="blog-author">By <%= post.author %></p>
+          <p> <%= post.batch %></p>
+          <a href="blog/<%= post.slug %>" class="read-more">View Post</a>
+        </div>
       </div>
     </section>
     <% }) %>

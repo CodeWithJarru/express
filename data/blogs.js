@@ -1,14 +1,16 @@
 const blogs = [
     {
-        title: "How to Create an Express.js Server with Node.js",
-        slug: "express-js-server",
-        author: "CodeWithHarry",
-        content: `
-          <p>Express.js is a powerful Node.js web application framework that helps in building APIs and web apps quickly and efficiently.</p>
-      
+        "title": "How to Create an Express.js Server with Node.js",
+        "slug": "express-js-server",
+        "author": "CodeWithHarry",
+        "batch": "Full Stack Web Development",
+        "thumbnail": "img.jpg",
+        "content": `
+        <p>Express.js is a powerful Node.js web application framework that helps in building APIs and web apps quickly and efficiently.</p>
+        
           <h2>Step #1: Installation</h2>
           <p>Open your terminal and run the following commands to install required packages:</p>
-      
+          
           <div class="code">
             npm install express<br>
             npm install nodemon<br>
@@ -16,13 +18,13 @@ const blogs = [
             npm install dotenv<br>
             npm install mongoose
           </div>
-      
+          
           <h2>Step #2: Create the Entry File</h2>
           <p>Create a file named <b>app.js</b> in your project root and add the following code:</p>
-      
+          
           <div class="code">
-            const express = require('express');<br>
-            const app = express();<br>
+          const express = require('express');<br>
+          const app = express();<br>
             const cors = require('cors');<br>
             const mongoose = require('mongoose');<br><br>
       
@@ -35,36 +37,38 @@ const blogs = [
               .then(() => console.log('MongoDB connected'))<br>
               .catch(err => console.log(err));<br><br>
       
-            // Start the server<br>
-            app.listen(3000, () => {<br>
+              // Start the server<br>
+              app.listen(3000, () => {<br>
               &nbsp;&nbsp;console.log('Server is running on port 3000');<br>
             });
           </div>
       
           <p>This script sets up a basic Express server, connects it to MongoDB, and starts it on port 3000.</p>
           <p>From here, you can start adding your routes, controllers, and middleware as needed.</p>
-        `
-      },
+          `
+        },
       
-      {
-        title: "JavaScript in One Video: Complete Guide for Beginners",
-        slug: "javascript-in-one-video",
-        author: "JarruCoder",
-        content: `
+        {
+          "title": "JavaScript in One Video: Complete Guide for Beginners",
+          "slug": "javascript-in-one-video",
+          "author": "JarruCoder",
+          "batch": "Full Stack Web Development",
+          "thumbnail": "img.jpg",
+          "content": `
           <p>JavaScript is the most popular scripting language for web development. Whether you're building websites, games, or full-stack applications — JavaScript is everywhere!</p>
-      
+          
           <h2>📌 What is JavaScript?</h2>
           <p>JavaScript is a lightweight, interpreted programming language used to create interactive effects within web browsers. It runs on the client-side, though it can also be used on the server-side using Node.js.</p>
-      
+          
           <h2>💡 Variables in JavaScript</h2>
           <p>We use <code>var</code>, <code>let</code>, or <code>const</code> to declare variables.</p>
       
           <div class="code">
-            let name = "Jarru";<br>
+          let name = "Jarru";<br>
             const age = 25;<br>
             var city = "Lahore";
           </div>
-      
+          
           <h2>🔄 Functions in JavaScript</h2>
           <p>Functions help you reuse code. You define it once and call it as many times as needed.</p>
       
@@ -73,11 +77,11 @@ const blogs = [
             &nbsp;&nbsp;return "Hello, " + user;<br>
             }<br><br>
             console.log(greet("Zoe"));
-          </div>
-      
-          <h2>📚 Arrays and Loops</h2>
-          <p>Arrays store multiple values, and loops help us iterate through them.</p>
-      
+            </div>
+            
+            <h2>📚 Arrays and Loops</h2>
+            <p>Arrays store multiple values, and loops help us iterate through them.</p>
+            
           <div class="code">
             const fruits = ["Apple", "Banana", "Mango"];<br>
             for (let i = 0; i < fruits.length; i++) {<br>
@@ -87,24 +91,24 @@ const blogs = [
       
           <h2>🧱 Objects</h2>
           <p>Objects store data in key-value pairs and are widely used in JavaScript.</p>
-      
+          
           <div class="code">
-            const pet = {<br>
+          const pet = {<br>
             &nbsp;&nbsp;name: "Zoe",<br>
             &nbsp;&nbsp;type: "Dog",<br>
             &nbsp;&nbsp;age: 3<br>
             };<br><br>
             console.log(pet.name); // Output: Zoe
-          </div>
-      
-          <h2>⚡ DOM Manipulation</h2>
-          <p>JavaScript can interact with HTML using the DOM (Document Object Model).</p>
-      
-          <div class="code">
+            </div>
+            
+            <h2>⚡ DOM Manipulation</h2>
+            <p>JavaScript can interact with HTML using the DOM (Document Object Model).</p>
+            
+            <div class="code">
             document.getElementById("btn").addEventListener("click", function() {<br>
             &nbsp;&nbsp;alert("Button Clicked!");<br>
             });
-          </div>
+            </div>
       
           <h2>🚀 Final Words</h2>
           <p>This was a quick crash course on JavaScript basics. Once you're comfortable with these concepts, you can explore advanced topics like ES6+, Promises, async/await, APIs, and frameworks like React or Vue.</p>
@@ -116,8 +120,10 @@ const blogs = [
         "title": "Understanding Async/Await in JavaScript",
         "slug": "async-await-guide",
         "author": "TechGuru",
+        "batch": "Full Stack Web Development",
+        "thumbnail": "img.jpg",
         "content": `
-          <p>Async/Await is a modern way to handle asynchronous operations in JavaScript. It makes asynchronous code look and behave like synchronous code, which is easier to read, write, and debug.</p>
+        <p>Async/Await is a modern way to handle asynchronous operations in JavaScript. It makes asynchronous code look and behave like synchronous code, which is easier to read, write, and debug.</p>
       
           <h2>⏳ Why Async/Await?</h2>
           <p>Traditionally, JavaScript used callbacks and then Promises to handle asynchronous operations like API calls, timeouts, or file reading. But deeply nested callbacks (callback hell) and complex .then() chains made code hard to manage.</p>
@@ -127,15 +133,15 @@ const blogs = [
           <strong>Await</strong> pauses the execution inside an async function until the Promise is resolved or rejected.</p>
       
           <div class="code">
-            async function fetchData() {<br>
+          async function fetchData() {<br>
             &nbsp;&nbsp;const response = await fetch("https://api.example.com/data");<br>
             &nbsp;&nbsp;const data = await response.json();<br>
             &nbsp;&nbsp;console.log(data);<br>
             }
-          </div>
-      
+            </div>
+            
           <h2>💡 Example: With Promises vs With Async/Await</h2>
-      
+          
           <p><strong>Using Promises:</strong></p>
           <div class="code">
             fetch("https://api.example.com/data")<br>
@@ -143,7 +149,7 @@ const blogs = [
             &nbsp;&nbsp;.then(data => console.log(data))<br>
             &nbsp;&nbsp;.catch(error => console.error(error));
           </div>
-      
+          
           <p><strong>Using Async/Await:</strong></p>
           <div class="code">
             async function getData() {<br>
@@ -155,16 +161,16 @@ const blogs = [
             &nbsp;&nbsp;&nbsp;&nbsp;console.error(err);<br>
             &nbsp;&nbsp;}<br>
             }
-          </div>
+            </div>
       
           <h2>⚠️ Common Mistakes</h2>
           <ul>
             <li>Only use <code>await</code> inside <code>async</code> functions.</li>
             <li>Don’t forget to use <code>try...catch</code> for error handling.</li>
-          </ul>
+            </ul>
       
-          <h2>🚀 Real Use Case: Simulate API Call</h2>
-          <p>Let's simulate a fake API using <code>setTimeout</code> and use async/await on it.</p>
+            <h2>🚀 Real Use Case: Simulate API Call</h2>
+            <p>Let's simulate a fake API using <code>setTimeout</code> and use async/await on it.</p>
       
           <div class="code">
             function fakeApi() {<br>
@@ -172,7 +178,7 @@ const blogs = [
             &nbsp;&nbsp;&nbsp;&nbsp;setTimeout(() => resolve("Data loaded"), 2000);<br>
             &nbsp;&nbsp;});<br>
             }<br><br>
-      
+            
             async function load() {<br>
             &nbsp;&nbsp;console.log("Loading...");<br>
             &nbsp;&nbsp;const result = await fakeApi();<br>
@@ -180,18 +186,20 @@ const blogs = [
             }<br><br>
       
             load();
-          </div>
+            </div>
       
-          <h2>📌 Conclusion</h2>
+            <h2>📌 Conclusion</h2>
           <p>Async/Await is the preferred way to handle asynchronous code in modern JavaScript. It gives your code a cleaner, linear structure, making it easier to work with than chaining Promises or dealing with callbacks.</p>
       
           <p>Learn it once, and you'll write better asynchronous JavaScript forever.</p>
-        `
-      }
+          `
+        }
 ,      
 {
     "title": "Top 10 VS Code Extensions for Developers",
     "slug": "vs-code-extensions",
+    "batch": "Full Stack Web Development",
+    "thumbnail": "img.jpg",
     "content": `
     <p>Visual Studio Code (VS Code) is one of the most popular code editors today, and its power lies in its rich ecosystem of extensions. Here's a curated list of the top 10 VS Code extensions that every developer should try.</p>
     

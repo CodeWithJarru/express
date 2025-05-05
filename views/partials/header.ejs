@@ -173,15 +173,29 @@
     .blog-card {
       max-width: 500px;
       width: 400px;
-      padding: 40px;
       background: transparent;
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+      border: 1px solid #ccc;
+    }
+
+    .blog-card:hover {
+      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+      transform: scale(1.02);
+      transition: all 0.3s ease;
+    }
+    
+    .card-body {
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-bottom: 25px;
+
     }
 
     .blog-title {
       font-size: 2rem;
       margin-bottom: 15px;
+      margin-top: 0;
     }
 
     .blog-content {
@@ -218,10 +232,17 @@
   overflow-x: auto;
 }
 
+.thumbnail {
+  width: 100%;
+  margin: 0;
+}
+
 .post {
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
-  border-radius: 12px;
+  /* box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4); */
+  /* border-radius: 12px; */
   padding: 1px 40px;
+  margin: auto;
+  width: 70%;
 }
 
     .read-more:hover {

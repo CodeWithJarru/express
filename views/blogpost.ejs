@@ -1,12 +1,19 @@
 <%- include('./partials/header') %>
   <div class="container mt-5">
     <div class="post">
+      <h4 class="title" style="margin: 0;"><%= post.title %></h4>
+      <p> <%= post.batch %></p>
+      <center>
+
+        <img src="/<%- post.thumbnail %>" alt="" width="500px" style="margin: auto;">
+      </center>
+      
+
       <div class="card-header">
-        <h4 class="title"><%= post.title %></h4>
       </div>
       <div class="card-body">
         <p class="card-text"><%- post.content %></p>
-        <p class="card-text">By <%= post.author %></p>
+        <p class="blog-author">By <%= post.author %></p>
       </div>
     </div>
   </div>
